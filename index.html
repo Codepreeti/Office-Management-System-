@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spikeage IT Company - Office Management Software</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: #343434ee;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ff9800;
+        }
+
+        header nav ul li a.btn {
+            background: #ff9800;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a.btn:hover {
+            color: #121212;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            color: #fff;
+            background-color: #121212;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoomInCenter 1s ease-in-out forwards;
+        }
+
+        @keyframes zoomInCenter {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            padding: 2rem;
+            margin-bottom: 30px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            color: transparent;
+            -webkit-text-stroke: .7px #e0ddd9;
+            /* background-image: linear-gradient(#e0ddd9); */
+            
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: homeBgText 6s linear infinite, typing 4s steps(30) 1s forwards;
+        }
+
+        @keyframes homeBgText {
+
+            0%,
+            10%,
+            100% {
+                background-position: -33rem 0;
+            }
+
+            65%,
+            85% {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .hero .cta-btn {
+            background: linear-gradient(90deg, #ff9800, #e58900);
+            color: #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            position: relative;
+            /* transition: box-shadow 0.3s; */
+        }
+
+        .hero .cta-btn:hover {
+            box-shadow: 0 0 5px 5px #e6e3df;
+            ;
+        }
+
+        /* About Section */
+        #about {
+            padding: 20px 20px;
+            text-align: center;
+            background-color: #343434ee;
+        }
+
+        #about h2 {
+            padding: .5rem;
+            font-size: 3rem;
+            color: #ff9800;
+        }
+
+        #about p {
+            max-width: 900px;
+            font-size: 1rem;
+            margin: auto;
+            padding-bottom: 8em;
+            opacity: 1;
+            transform: translateY(50px);
+            /* Positioned for animation effect */
+        }
+
+        /* Features Section */
+        #features {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #121212;
+        }
+
+        #features h2 {
+            margin-bottom: 30px;
+            font-size: 3rem;
+            color: #ff9800;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px 5px #f2ce99;
+            z-index: 10;
+        }
+
+        .feature {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 1s ease-in;
+        }
+
+        .feature h3 {
+            color: #ff9800;
+        }
+
+        .feature p {
+            color: #e0e0e0;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer h2 {
+            font-size: 2rem;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="spikeage logo 2.jpg" alt="Spikeage IT Company Logo">
+
+            <h1>Spikeage IT Company</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="f?p=&APP_ID.:9999" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="Heading">Welcome to the Spikeage Office Management System</h2>
+        <p>Effortless management, seamless operations.</p>
+        <!-- <a href="f?p=&APP_ID.:9999" class="cta-btn">Get Started</a> -->
+        <div class="button-wrapper">
+            <a href="f?p=&APP_ID.:9999" class="cta-btn">Get Started</a>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h2 class="Heading">About</h2>
+        <p>This advanced software, designed by Spikeage IT Company, streamlines office operations for seamless
+            management of students, employees, finances, and libraries. Built with Oracle APEX and innovative
+            technologies, it caters to diverse organizational needs.</p>
+    </section>
+
+    <section id="features">
+        <h2 class="Heading">Features</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Student Management</h3>
+                <p>Track student records, attendance, and fee payments effortlessly.</p>
+            </div>
+            <div class="feature">
+                <h3>Employee Management</h3>
+                <p>Manage employee attendance, salary, and leave records efficiently.</p>
+            </div>
+            <div class="feature">
+                <h3>Library Management</h3>
+                <p>Keep track of issued books, returns, and overdue fines.</p>
+            </div>
+            <div class="feature">
+                <h3>Finance Tracking</h3>
+                <p>Monitor income, expenses, and generate financial reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 class="Heading">Contact Us</h2>
+        <p>For inquiries, reach us at <a href="mailto:info@spikeage.com">info@spikeage.com</a></p>
+        <p>&copy; 2025 Spikeage IT Company</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal({
+            distance: '50px',     // Distance of the element's animation
+            duration: 2000,       // Animation duration in milliseconds
+            delay: 100,           // Delay before animation starts
+            reset: false          // Set to true if you want the animation to repeat on every scroll
+        });
+
+        ScrollReveal().reveal('#about, .Heading', { origin: 'top' });
+        ScrollReveal().reveal('#about p, .feature', { origin: 'bottom', delay: 200 }); 
+    </script>
+
+</body>
+
+</html>
